@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Nitesh Yadav</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.692);
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(16, 108, 139);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(235, 201, 213);
+            font-size: 1.2rem;
+        }
+
+        .skills-dropdown {
+    position: relative;
+}
+
+        /* Dropdown Menu (Hidden by Default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(10, 7, 40);
+    list-style: none;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Dropdown Items */
+.dropdown-menu li {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .about-container {
+            width: 70%;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            color: rgb(103, 16, 169);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: rgb(4, 1, 23);
+            height: 125px;
+            margin-top: 50px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 25px 100px;
+        }
+        footer .footer-first{
+            text-align: center;
+            color: rgba(128, 128, 128, 0.466);
+            padding: 12px 0;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: rgba(128, 128, 128, 0.466);
+           padding: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">Nitesh's Portfolio</div>
+        <div class="eight">
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="project.html" target="_blank">Projects</a></li>
+
+                <li class="skills-dropdown">
+                    <a href="#" id="skills-btn">Skills ▾</a>
+                    <ul class="dropdown-menu" id="skills-menu">
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Spring Boot</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">MySQL</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" target="_blank">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="about-container">
+            <h1 class="about-title">About Me</h1>
+            <p class="about-content">
+                👋 Hello! I'm <b>Nitesh Yadav</b>, a passionate and driven Software Engineering student on a mission to leverage technology to solve real-world problems.
+                <br><br>
+                Currently pursuing a degree in <b>Software Engineering</b> at <b>Swami Vivekananda University</b>, I am enthusiastic about exploring the depths of programming, system design, and software development. 
+                <br><br>
+                My academic journey has equipped me with a solid foundation in computer science principles and hands-on experience with various programming languages, including <b>Java Core, HTML, and C</b>.
+                <br><br>
+                I thrive in collaborative environments and am always eager to take on new challenges that push my boundaries. Whether it’s through coding projects, internships, or contributing to open-source initiatives, I am dedicated to continuous learning and growth.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <p>🚀 "Code, Deploy, Repeat!" | Made with 💻 by Nitesh</p>
+   
+            </div>
+        </div>
+        <div class="footer-rights">Copyright&#169;nitesh'sportfolio.com | All rights reserved</div>
+    </footer>
+
+    <script>
+        // below> code is for skills dropdown navbar conecting it with for js functioning
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const skillsBtn = document.getElementById("skills-btn");
+            const skillsMenu = document.getElementById("skills-menu");
+        
+            skillsBtn.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                event.stopPropagation(); // Prevent the event from bubbling up
+                skillsMenu.classList.toggle("active");
+            });
+        
+            // Close dropdown when clicking outside
+            document.addEventListener("click", function (event) {
+                if (!skillsBtn.contains(event.target) && !skillsMenu.contains(event.target)) {
+                    skillsMenu.classList.remove("active");
+                }
+            });
+        
+            // Prevent dropdown from closing when clicking inside it
+            skillsMenu.addEventListener("click", function (event) {
+                event.stopPropagation();
+            });
+        });
+        
+        
+            </script>
+        
+
+</body>
+
+</html>

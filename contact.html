@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Nitesh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.692);
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            background-color: rgb(16, 108, 139);
+        }
+
+        .left {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: rgb(235, 201, 213);
+            font-size: 1.1rem;
+        }
+
+        /* Contact Form */
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 40px;
+            background: rgb(20, 20, 20);
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 12px;
+            width: 100%;
+            background: rgb(16, 108, 139);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: rgb(10, 80, 120);
+        }
+
+        .thank-you {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(0, 255, 0);
+            font-weight: bold;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media screen and (max-width: 1024px) {
+            .container {
+                width: 70%;
+                padding: 30px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+            }
+            .container {
+                width: 90%;
+                padding: 25px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            input, textarea {
+                font-size: 14px;
+            }
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="left">Nitesh's Portfolio</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <div class="thank-you" id="thank-you-message">Thank you for contacting us!</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const thankYouMessage = document.getElementById("thank-you-message");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent actual form submission
+
+                // Show Thank You message
+                thankYouMessage.style.display = "block";
+
+                // Clear the form fields
+                form.reset();
+
+                // Hide the message after 3 seconds
+                setTimeout(function () {
+                    thankYouMessage.style.display = "none";
+                }, 3000);
+            });
+        });
+    </script>
+
+</body>
+</html>

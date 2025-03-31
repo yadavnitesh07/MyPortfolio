@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Nitesh Yadav</title>
+
+    <style>
+        /* Reset and General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.692);
+            color: white;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(16, 108, 139);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 28px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(235, 201, 213);
+            font-size: 1.2rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+        
+        .skills-dropdown {
+    position: relative;
+}
+
+        /* Dropdown Menu (Hidden by Default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(10, 7, 40);
+    list-style: none;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.active {
+    display: block;
+}
+
+/* Dropdown Items */
+.dropdown-menu li {
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+        /* Project Section */
+        .projects-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .projects-container h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: rgb(103, 16, 169);
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+            color: rgb(40, 10, 141);
+        }
+
+        .project-card h2 {
+            font-size: 24px;
+            color: rgb(191, 41, 91);
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 16px;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .project-card ul li {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgb(4, 1, 23);
+            height: 125px;
+            text-align: center;
+            color: rgba(128, 128, 128, 0.466);
+            padding: 80px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="left">Nitesh's Portfolio</div>
+        <div class="eight">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+
+                <li class="skills-dropdown">
+                    <a href="javascript:void(0);" id="skills-btn">Skills ▾</a>
+                    <ul class="dropdown-menu" id="skills-menu">
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Spring Boot</a></li>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">MySQL</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="projects-container">
+        <h1>Projects</h1>
+        <p style="text-align:center;">Here are some of the projects I have worked on:</p>
+
+        <div class="project-card">
+            <h2>Smart Contact Management System</h2>
+            <p>
+                A cloud-based contact management application that allows users to store, manage, and organize their contacts efficiently.
+                It features user authentication, role-based access, and a responsive UI for seamless interaction.
+            </p>
+
+            <h3>🔹 Technologies Used:</h3>
+            <ul>
+                <li><strong>Backend:</strong> Java, Spring Boot, Spring MVC, Hibernate ORM</li>
+                <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Tailwind CSS</li>
+                <li><strong>Database:</strong> MySQL</li>
+                <li><strong>Security:</strong> Spring Security (for authentication & authorization)</li>
+                <li><strong>Additional:</strong> REST APIs, Thymeleaf (for templating)</li>
+            </ul>
+
+            <h3>🚀 Key Features:</h3>
+            <ul>
+                <li>🔐 Secure user authentication & role management</li>
+                <li>📝 CRUD operations for contact management</li>
+                <li>☁️ Cloud Storage Integration</li>
+            </ul>
+        </div>
+
+    
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &#169; Nitesh's Portfolio | All rights reserved</p>
+    </footer>
+
+    <script>
+// below> code is for skills dropdown navbar conecting it with for js functioning
+
+document.addEventListener("DOMContentLoaded", function () {
+    const skillsBtn = document.getElementById("skills-btn");
+    const skillsMenu = document.getElementById("skills-menu");
+
+    skillsBtn.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        event.stopPropagation(); // Prevent event bubbling
+        skillsMenu.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!skillsBtn.contains(event.target) && !skillsMenu.contains(event.target)) {
+            skillsMenu.classList.remove("active");
+        }
+    });
+
+    // Prevent dropdown from closing when clicking inside it
+    skillsMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+});
+
+
+    </script>
+
+ 
+
+</body>
+
+</html>
