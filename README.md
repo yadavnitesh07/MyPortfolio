@@ -1,30 +1,47 @@
-# 🎨 Portfolio Website – Nitesh Yadav  
-This is my personal portfolio website showcasing my skills, projects, and experience.  
+# Portfolio Website – Nitesh Yadav
 
-## 🚀 Technologies Used  
-- HTML, CSS, JavaScript  
-- Tailwind CSS  
-- Typed.js for text animation  
+This is my personal portfolio website showcasing my skills, projects, and experience.
 
-## 📸 Preview  
-Here are some screenshots of the website:  
+## 🚀 Technologies Used
 
-### 🏠 Home Page  
-![Home Page](assets/preview-home.png)  
+- HTML, CSS, JavaScript
+- Tailwind CSS
+- Typed.js for text animation
 
-### 📖 About Page  
-![About Page](assets/preview-about.png)  
+## 📸 Preview
 
-### 💼 Projects Page  
-![Projects Page](assets/preview-projects.png)  
+Here are some screenshots of the website:
 
-### 📩 Contact Page  
-![Contact Page](assets/preview-contact.png) 
- 
-### 📩 Contact Page  
-![skills Page](assets/preview-skills.png) 
+- [🏠 Home Page](#home-page)
+- [📖 About Page](#about-page)
+- [💼 Projects Page](#projects-page)
+- [📩 Contact Page](#contact-page)
+- [🛠️ Skills Page](#skills-page)
 
-## 📂 How to Use  
-1. **Clone the repository**:  
-   ```bash
-  git clone https://github.com/yadavnitesh07/MyPortfolio
+## Home Page
+
+![Home Page](assets/home-page-screenshot.png)
+
+## About Page
+
+![About Page](assets/about-page-screenshot.png)
+
+## Projects Page
+
+![Projects Page](assets/projects-page-screenshot.png)
+
+## Contact Page
+
+![Contact Page](assets/contact-page-screenshot.png)
+
+## Skills Page
+
+![Skills Page](assets/skills-page-screenshot.png)
+
+## 📂 How to Use
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yadavnitesh07/MyPortfolio
+
