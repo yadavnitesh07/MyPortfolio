@@ -19,24 +19,26 @@ Here are some screenshots of the website:
 - [🛠️ Skills Page](#skills-page)
 
 ## Home Page
+## 🏠 Home Page
 
-![Home Page](assets/home-page-screenshot.png)
+![Home Page](assets/preview-home.png)
 
-## About Page
+## 📖 About Page
 
-![About Page](assets/about-page-screenshot.png)
+![About Page](assets/preview-about.png)
 
-## Projects Page
+## 💼 Projects Page
 
-![Projects Page](assets/projects-page-screenshot.png)
+![Projects Page](assets/preview-projects.png)
 
-## Contact Page
+## 📩 Contact Page
 
-![Contact Page](assets/contact-page-screenshot.png)
+![Contact Page](assets/preview-contact.png)
 
-## Skills Page
+## 🛠️ Skills Page
 
-![Skills Page](assets/skills-page-screenshot.png)
+![Skills Page](assets/preview-skills.png)
+
 
 ## 📂 How to Use
 
