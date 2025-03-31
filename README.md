@@ -21,23 +21,23 @@ Here are some screenshots of the website:
 ## Home Page
 ## 🏠 Home Page
 
-![Home Page](assets/preview-home.png)
+![Home Page](assets/preview-home.png.png)
 
 ## 📖 About Page
 
-![About Page](assets/preview-about.png)
+![About Page](assets/preview-about.png.png)
 
 ## 💼 Projects Page
 
-![Projects Page](assets/preview-projects.png)
+![Projects Page](assets/preview-projects.png.png)
 
 ## 📩 Contact Page
 
-![Contact Page](assets/preview-contact.png)
+![Contact Page](assets/preview-contact.png.png)
 
 ## 🛠️ Skills Page
 
-![Skills Page](assets/preview-skills.png)
+![Skills Page](assets/preview-skills.png.png)
 
 
 ## 📂 How to Use
