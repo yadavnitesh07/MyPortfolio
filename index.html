@@ -4,177 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitesh-Developer Portfolio</title>
-
-
+    <title>Nitesh - Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: rgba(0, 0, 0, 0.692);
-
+            background-color: rgba(0, 0, 0, 0.85);
             color: white;
-
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            width: 100%;
             height: 80px;
             background-color: rgb(16, 108, 139);
+            padding: 0 20px;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            list-style: none;
+            width: 100%;
+            justify-content: flex-end;
         }
 
         nav ul li {
-            list-style: none;
-            margin: 0 28px;
-
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
-
+            font-weight: 500;
         }
 
-        nav ul li a:hover {
-            color: rgb(235, 201, 213);
-            font-size: 1.2rem;
-        }
-
-        .left {
-            font-size: 1.5rem;
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
         }
 
         .firstSection {
             display: flex;
-            justify-content: space-around;
-            align-items: top;
-            margin: 80px 20px;
-
-        }
-
-        .firstSection>div {
-
-
-            width: 45%;
-
-
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
         }
 
         .leftSection {
-
-            font-size: 2.5rem;
-            width: 80%;
+            flex: 1;
+            min-width: 300px;
         }
 
-        .leftSection .buttons {
-            padding: 25px;
+        .leftSection span {
+            font-size: 2rem;
+        }
+
+        .buttons {
+            margin-top: 20px;
             display: flex;
             gap: 15px;
-            /* Ensures equal spacing between buttons */
+            justify-content: center;
         }
 
-        .leftSection .btn {
+        .btn {
             padding: 12px 20px;
-            /* Equal padding for both buttons */
             background-color: rgb(3, 3, 36);
-            /* Same background */
             color: white;
             border: 2px solid white;
             border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
-            /* Ensures same font size */
             text-align: center;
-            width: 180px;
-            /* Ensures same width */
-            height: 50px;
-            /* Ensures same height */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: rgb(10, 10, 80);
+        }
+
+        .rightSection img {
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .rightSection {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        /* Hover effect for both buttons */
-        .leftSection .btn:hover {
-            background-color: rgb(10, 10, 80);
-            border-color: rgb(255, 255, 255);
-            transform: scale(1.05);
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
+    
+
+        @media (max-width: 1024px) {
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rightSection img {
+                width: 60%;
+            }
         }
 
-        .skills-dropdown {
-    position: relative;
-}
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
 
-        /* Dropdown Menu (Hidden by Default) */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgb(10, 7, 40);
-    list-style: none;
-    padding: 10px 0;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    z-index: 10;
-}
+            nav ul {
+                justify-content: center;
+            }
 
-/* Show dropdown when active */
-.dropdown-menu.active {
-    display: block;
-}
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
 
-/* Dropdown Items */
-.dropdown-menu li {
-    padding: 10px;
-    color: white;
-    text-align: center;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-        .rightSection img {
-            width: 60%;
-            margin: 40px 0;
+            .rightSection img {
+                width: 70%;
+                margin: 25px;
+            }
         }
 
-
-        .purple {
-            color: rgb(155, 53, 234);
-        }
-
-        #element {
-            margin: 25px;
-            color: rgb(191, 41, 91);
-        }
-
+        
 
         footer {
             background-color: rgb(4, 1, 23);
@@ -185,7 +162,7 @@
             color: rgba(200, 200, 200, 0.8);
             /* Soft grayish-white text */
         }
-
+        
         /* Footer container */
         .footer {
             display: flex;
@@ -211,7 +188,7 @@
             /* Space between icons */
             align-items: center;
         }
-
+        
         /* Social Media Icons */
         .footer-right a {
             color: rgba(200, 200, 200, 0.8);
@@ -236,13 +213,30 @@
             border-top: 1px solid rgba(255, 255, 255, 0.2);
             /* Subtle separator */
         }
+        
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 50px;
+    }
+
+    .footer-left {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+}
+
     </style>
 </head>
 
-
 <body>
-
-
     <nav>
         <div class="left">Portfolio</div>
         <div class="right">
@@ -250,74 +244,51 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html">Projects</a></li>
-
-                <li class="skills-dropdown">
-                    <a href="#" id="skills-btn">Skills ▾</a>
-                    <ul class="dropdown-menu" id="skills-menu">
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Spring Boot</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">MySQL</a></li>
-                    </ul>
-                </li>
+                <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
-                
             </ul>
         </div>
-
     </nav>
 
-
-
-    <main>
+    <div class="container">
         <section class="firstSection">
             <div class="leftSection">
-                <span>What's up, I'm<span class="purple"> Nitesh</span></span>
-                <div>and I am a Passionate &#x1F449
-                    <span id="element"></span>
-
-                    <div class="buttons">
-                        <button class="btn" onclick="downloadResume()">Download Resume</button>
-                        <button class="btn" onclick="window.open('https://github.com/yadavnitesh07', '_blank')">Visit
-                            GitHub</button>
-
-
-                    </div>
+                <span>What's up, I'm <span class="purple">Nitesh</span></span>
+                <div>and I am a Passionate &#x1F449 <span id="element"></span></div>
+                <div class="buttons">
+                    <button class="btn" onclick="downloadResume()">Download Resume</button>
+                    <button class="btn" onclick="window.open('https://github.com/yadavnitesh07', '_blank')">Visit GitHub</button>
                 </div>
             </div>
             <div class="rightSection">
-                <img src="developer.png" alt="">
+                <img src="developer.png" alt="Developer Image">
             </div>
         </section>
+    </div>
 
-    </main>
-
-    <!-- footer -->
-    <footer>
-        <div class="footer">
-            <!-- Left Side: Text -->
-            <div class="footer-left">
-                <p>© 2025 Nitesh Yadav | Backend Developer</p>
-                <p>Designed & Built with ❤️ by Nitesh</p>
+        <!-- footer -->
+        <footer>
+            <div class="footer">
+                <!-- Left Side: Text -->
+                <div class="footer-left">
+                    <p>© 2025 Nitesh Yadav | Backend Developer</p>
+                    <p>Designed & Built with ❤️ by Nitesh</p>
+                </div>
+    
+                <!-- Right Side: Social Links -->
+                <div class="footer-right">
+                    <a href="https://www.instagram.com/yadavnitesh_30?igsh=MTJrMjB6a3B0ajJ6" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/yadavnitesh07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/Nitesh83769555?t=mQP8iLSAPHaPpxDLv2cnCQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/yadavnitesh07" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
-
-            <!-- Right Side: Social Links -->
-            <div class="footer-right">
-                <a href="https://www.instagram.com/yadavnitesh_30?igsh=MTJrMjB6a3B0ajJ6" target="_blank"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/yadavnitesh07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://x.com/Nitesh83769555?t=mQP8iLSAPHaPpxDLv2cnCQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://github.com/yadavnitesh07" target="_blank"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
-
-        <!-- Bottom Center: Copyright -->
-        <div class="footer-rights">Copyright &#169; nitesh'sportfolio.com | All rights reserved</div>
-    </footer>
-
+    
+            <!-- Bottom Center: Copyright -->
+            <div class="footer-rights">Copyright &#169; nitesh'sportfolio.com | All rights reserved</div>
+        </footer>
 
 
     <!-- Element to contain animated typing -->
@@ -325,45 +296,20 @@
 
     <!-- Setup and start animation! -->
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Backend Magician 🪄', 'Spring Boot Developer', 'Problem Solver', 'Web Developer'],
-            typeSpeed: 50,
+         document.addEventListener('DOMContentLoaded', function () {
+            var typed = new Typed('#element', {
+                strings: ['Backend Magician 🪄', 'Spring Boot Developer', 'Problem Solver', 'Web Developer'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
         });
-
 
     // Resume Download Function
         function downloadResume() {
     window.location.href = 'NITESH YADAV_RESUME02 (1).pdf'; // Ensure the correct filename
 }
-
-
-
-// below> code is for skills dropdown navbar conecting it with for js functioning
-
-        document.addEventListener("DOMContentLoaded", function () {
-    const skillsBtn = document.getElementById("skills-btn");
-    const skillsMenu = document.getElementById("skills-menu");
-
-    skillsBtn.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        event.stopPropagation(); // Prevent the event from bubbling up
-        skillsMenu.classList.toggle("active");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!skillsBtn.contains(event.target) && !skillsMenu.contains(event.target)) {
-            skillsMenu.classList.remove("active");
-        }
-    });
-
-    // Prevent dropdown from closing when clicking inside it
-    skillsMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
-});
-
-
+    
     </script>
 
     <!--external  adding js file! -->

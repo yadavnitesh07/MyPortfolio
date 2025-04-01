@@ -8,38 +8,42 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
 
         body {
             background-color: rgba(0, 0, 0, 0.692);
             color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
+        /* Navigation Bar */
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            width: 100%;
             height: 80px;
             background-color: rgb(16, 108, 139);
+            padding: 0 20px;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            list-style: none;
         }
 
         nav ul li {
-            list-style: none;
-            margin: 0 28px;
+            margin: 0 15px;
         }
 
         nav ul li a {
@@ -49,94 +53,155 @@
 
         nav ul li a:hover {
             color: rgb(235, 201, 213);
-            font-size: 1.2rem;
         }
-
-        .skills-dropdown {
-    position: relative;
-}
-
-        /* Dropdown Menu (Hidden by Default) */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgb(10, 7, 40);
-    list-style: none;
-    padding: 10px 0;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    z-index: 10;
-}
-
-/* Show dropdown when active */
-.dropdown-menu.active {
-    display: block;
-}
-
-/* Dropdown Items */
-.dropdown-menu li {
-    padding: 10px;
-    color: white;
-    text-align: center;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 
         .left {
             font-size: 1.5rem;
+            font-weight: bold;
         }
 
-        .about-container {
-            width: 70%;
-            margin: 100px auto;
-            padding: 30px;
+        /* About Section */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .about-section {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
             background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
         }
 
-        .about-title {
+        .about-section h1 {
             font-size: 2.5rem;
             color: rgb(103, 16, 169);
-            text-align: center;
             margin-bottom: 20px;
         }
 
-        .about-content {
+        .about-section p {
             font-size: 1.2rem;
             line-height: 1.6;
             text-align: justify;
         }
 
+       
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-section {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                
+                justify-content: center;
+              
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .about-section {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+        
         footer {
             background-color: rgb(4, 1, 23);
-            height: 125px;
-            margin-top: 50px;
+            /* Dark blue background */
+            height: auto;
+            /* Auto height for better responsiveness */
+            padding: 20px 0;
+            color: rgba(200, 200, 200, 0.8);
+            /* Soft grayish-white text */
         }
-
+        
+        /* Footer container */
         .footer {
             display: flex;
+            justify-content: space-between;
+            /* Aligns left and right */
+            align-items: center;
             padding: 25px 100px;
-        }
-        footer .footer-first{
-            text-align: center;
-            color: rgba(128, 128, 128, 0.466);
-            padding: 12px 0;
+            flex-wrap: wrap;
+            /* Makes it responsive */
         }
 
-        footer .footer-rights {
-            text-align: center;
-            color: rgba(128, 128, 128, 0.466);
-           padding: auto;
+        /* Left Side (Text) */
+        .footer-left {
+            text-align: left;
+            flex: 1;
+            /* Takes available space */
         }
+
+        /* Right Side (Social Links) */
+        .footer-right {
+            display: flex;
+            gap: 15px;
+            /* Space between icons */
+            align-items: center;
+        }
+        
+        /* Social Media Icons */
+        .footer-right a {
+            color: rgba(200, 200, 200, 0.8);
+            /* Matching footer text */
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-right a:hover {
+            color: #f39c12;
+            /* Highlight effect on hover */
+        }
+
+        /* Copyright Text (Centered) */
+        .footer-rights {
+            text-align: center;
+            color: rgba(200, 200, 200, 0.5);
+            /* Lighter gray */
+            font-size: 14px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            /* Subtle separator */
+        }
+        
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 50px;
+    }
+
+    .footer-left {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 
@@ -144,83 +209,52 @@
 
     <nav>
         <div class="left">Nitesh's Portfolio</div>
-        <div class="eight">
-            <ul>
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="about.html" target="_blank">About</a></li>
-                <li><a href="project.html" target="_blank">Projects</a></li>
-
-                <li class="skills-dropdown">
-                    <a href="#" id="skills-btn">Skills ▾</a>
-                    <ul class="dropdown-menu" id="skills-menu">
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Spring Boot</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">MySQL</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html" target="_blank">Contact Me</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
     </nav>
 
-    <main>
-        <div class="about-container">
-            <h1 class="about-title">About Me</h1>
-            <p class="about-content">
-                👋 Hello! I'm <b>Nitesh Yadav</b>, a passionate and driven Software Engineering student on a mission to leverage technology to solve real-world problems.
+    <div class="container">
+        <div class="about-section">
+            <h1>About Me</h1>
+            <p>
+                👋 Hello! I'm <b>Nitesh Yadav</b>, a passionate and driven Software Engineering student dedicated to building scalable and efficient solutions.
                 <br><br>
-                Currently pursuing a degree in <b>Software Engineering</b> at <b>Swami Vivekananda University</b>, I am enthusiastic about exploring the depths of programming, system design, and software development. 
+                I am currently pursuing a degree in <b>Computer Science Engineering</b> at <b>Swami Vivekananda University</b>. My expertise lies in backend development with <b>Java, Spring Boot, and MySQL</b>, and I also have experience with front-end technologies like <b>HTML, CSS, and JavaScript</b>.
                 <br><br>
-                My academic journey has equipped me with a solid foundation in computer science principles and hands-on experience with various programming languages, including <b>Java Core, HTML, and C</b>.
-                <br><br>
-                I thrive in collaborative environments and am always eager to take on new challenges that push my boundaries. Whether it’s through coding projects, internships, or contributing to open-source initiatives, I am dedicated to continuous learning and growth.
+                I enjoy working on real-world projects, solving complex problems, and continuously improving my skills through learning and practice. My goal is to contribute to impactful projects and collaborate with like-minded developers.
             </p>
         </div>
-    </main>
+    </div>
 
+    <!-- footer -->
     <footer>
         <div class="footer">
-            <div class="footer-first">
-                <p>🚀 "Code, Deploy, Repeat!" | Made with 💻 by Nitesh</p>
-   
+            <!-- Left Side: Text -->
+            <div class="footer-left">
+                <p>© 2025 Nitesh Yadav | Backend Developer</p>
+                <p>Designed & Built with ❤️ by Nitesh</p>
+            </div>
+
+            <!-- Right Side: Social Links -->
+            <div class="footer-right">
+                <a href="https://www.instagram.com/yadavnitesh_30?igsh=MTJrMjB6a3B0ajJ6" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/yadavnitesh07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/Nitesh83769555?t=mQP8iLSAPHaPpxDLv2cnCQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/yadavnitesh07" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
-        <div class="footer-rights">Copyright&#169;nitesh'sportfolio.com | All rights reserved</div>
+
+        <!-- Bottom Center: Copyright -->
+        <div class="footer-rights">Copyright &#169; nitesh'sportfolio.com | All rights reserved</div>
     </footer>
-
-    <script>
-        // below> code is for skills dropdown navbar conecting it with for js functioning
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            const skillsBtn = document.getElementById("skills-btn");
-            const skillsMenu = document.getElementById("skills-menu");
-        
-            skillsBtn.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent default anchor behavior
-                event.stopPropagation(); // Prevent the event from bubbling up
-                skillsMenu.classList.toggle("active");
-            });
-        
-            // Close dropdown when clicking outside
-            document.addEventListener("click", function (event) {
-                if (!skillsBtn.contains(event.target) && !skillsMenu.contains(event.target)) {
-                    skillsMenu.classList.remove("active");
-                }
-            });
-        
-            // Prevent dropdown from closing when clicking inside it
-            skillsMenu.addEventListener("click", function (event) {
-                event.stopPropagation();
-            });
-        });
-        
-        
-            </script>
-        
-
 </body>
 
 </html>
+

@@ -5,90 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Nitesh Yadav</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Reset and General Styling */
-        * {
+         * {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: rgba(0, 0, 0, 0.692);
+            background-color: rgba(0, 0, 0, 0.85);
             color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Navigation Bar */
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            width: 100%;
             height: 80px;
             background-color: rgb(16, 108, 139);
+            padding: 0 20px;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
+            list-style: none;
+            width: 100%;
+            justify-content: flex-end;
         }
 
         nav ul li {
-            list-style: none;
-            margin: 0 28px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: white;
-        }
-
-        nav ul li a:hover {
-            color: rgb(235, 201, 213);
-            font-size: 1.2rem;
+            font-weight: 500;
         }
 
         .left {
             font-size: 1.5rem;
         }
         
-        .skills-dropdown {
-    position: relative;
-}
-
-        /* Dropdown Menu (Hidden by Default) */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: rgb(10, 7, 40);
-    list-style: none;
-    padding: 10px 0;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    z-index: 10;
-}
-
-/* Show dropdown when active */
-.dropdown-menu.active {
-    display: block;
-}
-
-/* Dropdown Items */
-.dropdown-menu li {
-    padding: 10px;
-    color: white;
-    text-align: center;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
+      
 
         /* Project Section */
         .projects-container {
@@ -139,15 +108,108 @@
             margin-bottom: 8px;
         }
 
-        /* Footer */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .projects-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+        }
+
+
+
+       
         footer {
             background-color: rgb(4, 1, 23);
-            height: 125px;
-            text-align: center;
-            color: rgba(128, 128, 128, 0.466);
-            padding: 80px;
-            margin-top: 20px;
+            /* Dark blue background */
+            height: auto;
+            /* Auto height for better responsiveness */
+            padding: 20px 0;
+            color: rgba(200, 200, 200, 0.8);
+            /* Soft grayish-white text */
         }
+        
+        /* Footer container */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            /* Aligns left and right */
+            align-items: center;
+            padding: 25px 100px;
+            flex-wrap: wrap;
+            /* Makes it responsive */
+        }
+
+        /* Left Side (Text) */
+        .footer-left {
+            text-align: left;
+            flex: 1;
+            /* Takes available space */
+        }
+
+        /* Right Side (Social Links) */
+        .footer-right {
+            display: flex;
+            gap: 15px;
+            /* Space between icons */
+            align-items: center;
+        }
+        
+        /* Social Media Icons */
+        .footer-right a {
+            color: rgba(200, 200, 200, 0.8);
+            /* Matching footer text */
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-right a:hover {
+            color: #f39c12;
+            /* Highlight effect on hover */
+        }
+
+        /* Copyright Text (Centered) */
+        .footer-rights {
+            text-align: center;
+            color: rgba(200, 200, 200, 0.5);
+            /* Lighter gray */
+            font-size: 14px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            /* Subtle separator */
+        }
+        
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 50px;
+    }
+
+    .footer-left {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 
@@ -156,23 +218,13 @@
     <!-- Navigation Menu -->
     <nav>
         <div class="left">Nitesh's Portfolio</div>
-        <div class="eight">
+        <div class="right">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html" class="active">Projects</a></li>
-
-                <li class="skills-dropdown">
-                    <a href="javascript:void(0);" id="skills-btn">Skills ▾</a>
-                    <ul class="dropdown-menu" id="skills-menu">
-                        <li><a href="#">Java</a></li>
-                        <li><a href="#">Spring Boot</a></li>
-                        <li><a href="#">HTML</a></li>
-                        <li><a href="#">CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">MySQL</a></li>
-                    </ul>
-                </li>
+                <li><a href="skills.html">Skills</a></li>
+                
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </div>
@@ -211,42 +263,31 @@
 
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright &#169; Nitesh's Portfolio | All rights reserved</p>
+     <!-- footer -->
+     <footer>
+        <div class="footer">
+            <!-- Left Side: Text -->
+            <div class="footer-left">
+                <p>© 2025 Nitesh Yadav | Backend Developer</p>
+                <p>Designed & Built with ❤️ by Nitesh</p>
+            </div>
+
+            <!-- Right Side: Social Links -->
+            <div class="footer-right">
+                <a href="https://www.instagram.com/yadavnitesh_30?igsh=MTJrMjB6a3B0ajJ6" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/yadavnitesh07?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/Nitesh83769555?t=mQP8iLSAPHaPpxDLv2cnCQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://github.com/yadavnitesh07" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <!-- Bottom Center: Copyright -->
+        <div class="footer-rights">Copyright &#169; nitesh'sportfolio.com | All rights reserved</div>
     </footer>
-
-    <script>
-// below> code is for skills dropdown navbar conecting it with for js functioning
-
-document.addEventListener("DOMContentLoaded", function () {
-    const skillsBtn = document.getElementById("skills-btn");
-    const skillsMenu = document.getElementById("skills-menu");
-
-    skillsBtn.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        event.stopPropagation(); // Prevent event bubbling
-        skillsMenu.classList.toggle("active");
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!skillsBtn.contains(event.target) && !skillsMenu.contains(event.target)) {
-            skillsMenu.classList.remove("active");
-        }
-    });
-
-    // Prevent dropdown from closing when clicking inside it
-    skillsMenu.addEventListener("click", function (event) {
-        event.stopPropagation();
-    });
-});
-
-
-    </script>
-
+  
  
-
 </body>
 
 </html>
